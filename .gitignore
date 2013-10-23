@@ -16,3 +16,7 @@ builtAssets
 config.js
 
 npm-debug.log
+
+.DS_Store
+
+site-log.txt
