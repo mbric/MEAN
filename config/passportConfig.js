@@ -40,7 +40,7 @@ module.exports = function (passport, config) {
             returnURL: config.keys.google.callback,
             realm: config.keys.google.realm
         },
-        function(accessToken, refreshToken, profile, done) {
+        function(identifier, profile, done) {
             User.findOne({ 'google.id': profile.id }, function (err, user) {
                 if (!user) {
                     user = new User({
